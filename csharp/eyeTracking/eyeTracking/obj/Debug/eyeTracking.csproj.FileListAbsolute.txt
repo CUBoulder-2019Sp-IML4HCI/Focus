@@ -1,0 +1,10 @@
+C:\Users\em370_000\Desktop\old projects\HCI\Focus\csharp\eyeTracking\eyeTracking\bin\Debug\eyeTracking.exe.config
+C:\Users\em370_000\Desktop\old projects\HCI\Focus\csharp\eyeTracking\eyeTracking\bin\Debug\Tobii.EyeX.Client.dll
+C:\Users\em370_000\Desktop\old projects\HCI\Focus\csharp\eyeTracking\eyeTracking\bin\Debug\eyeTracking.exe
+C:\Users\em370_000\Desktop\old projects\HCI\Focus\csharp\eyeTracking\eyeTracking\bin\Debug\eyeTracking.pdb
+C:\Users\em370_000\Desktop\old projects\HCI\Focus\csharp\eyeTracking\eyeTracking\bin\Debug\Tobii.Interaction.Model.dll
+C:\Users\em370_000\Desktop\old projects\HCI\Focus\csharp\eyeTracking\eyeTracking\bin\Debug\Tobii.Interaction.Net.dll
+C:\Users\em370_000\Desktop\old projects\HCI\Focus\csharp\eyeTracking\eyeTracking\obj\Debug\eyeTracking.csprojResolveAssemblyReference.cache
+C:\Users\em370_000\Desktop\old projects\HCI\Focus\csharp\eyeTracking\eyeTracking\obj\Debug\eyeTracking.exe
+C:\Users\em370_000\Desktop\old projects\HCI\Focus\csharp\eyeTracking\eyeTracking\obj\Debug\eyeTracking.pdb
+C:\Users\em370_000\Desktop\old projects\HCI\Focus\csharp\eyeTracking\eyeTracking\bin\Debug\SharpOSC.dll

@@ -1,6 +1,11 @@
 import netP5.*;
 import oscP5.*;
-color focus = color(100,5,20);
+int R = 100;
+int G = 5;
+float pR = 100;
+float pG = 5;
+int B = 20;
+color focus = color(R,G,B);
 
 //Global Variables
 OscP5 oscP5;
@@ -103,17 +108,18 @@ void draw(){
   stroke(0);
   arc(width/2,50,width/2,width/8, 0, PI);
 
-  fillLine += 1;
+  //fillLine += 1;
   //If beer is full, display text and empty the beer
   if (fillLine >= (height-50)){
           textSize(32);
           text("GRAB A BEER!", 97,200);
           fillLine = 80;
-          textTimer += 1;
+          //textTimer += 1;
+          textTimer = 100;
         }
   // Set up a timer for displaying the text
   if(textTimer > 0){
-    textTimer += 1;
+    textTimer -= 1;
     text("GRAB A BEER!", 97,200);
   };
   if(textTimer >=120){
@@ -124,6 +130,23 @@ void draw(){
 //This is called automatically when OSC message is received
 void oscEvent(OscMessage theOscMessage) {
   if (theOscMessage.checkAddrPattern("/wek/outputs") == true) {
+    float std = theOscMessage.get(0).floatValue();
+    
+    std = max(std-0.2,0);
+    std = 1.2*min(std,1);
+    fillLine += 0.2*std;
+    
+    R = int((float(255) - float(255)*min(1,std))/2 +pR/2);
+    G = int((float(255)*min(1,std))/2 +pG /2);
+    
+    pR = float(R);
+    pG = float(G);
+    
+    
+    focus = color(R,G,50);
+    
+    /*
+    
     if(theOscMessage.checkTypetag("f")) {
       float std = theOscMessage.get(0).floatValue();
       count += 1;
@@ -140,6 +163,8 @@ void oscEvent(OscMessage theOscMessage) {
         std_avg = 0;
       }
     }
+    */
+    
   }
 }
 

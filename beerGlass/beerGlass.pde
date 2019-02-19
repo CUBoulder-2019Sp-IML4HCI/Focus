@@ -21,7 +21,7 @@ void setup(){
   dest = new NetAddress("127.0.0.1",6448); //send messages back to Wekinator
   
   // Drawing
-  size(400,400);
+  size(300,300);
   
 }
 
@@ -108,11 +108,11 @@ void draw(){
   stroke(0);
   arc(width/2,50,width/2,width/8, 0, PI);
 
-  //fillLine += 1;
+ //fillLine += 1;
   //If beer is full, display text and empty the beer
   if (fillLine >= (height-50)){
           textSize(32);
-          text("GRAB A BEER!", 97,200);
+          text("GRAB A BEER!", width/2,height/2);
           fillLine = 80;
           //textTimer += 1;
           textTimer = 100;
@@ -120,7 +120,7 @@ void draw(){
   // Set up a timer for displaying the text
   if(textTimer > 0){
     textTimer -= 1;
-    text("GRAB A BEER!", 97,200);
+    text("GRAB A BEER!", width/2-100,height/2);
   };
   if(textTimer >=120){
     textTimer = 0;
@@ -132,8 +132,8 @@ void oscEvent(OscMessage theOscMessage) {
   if (theOscMessage.checkAddrPattern("/wek/outputs") == true) {
     float std = theOscMessage.get(0).floatValue();
     
-    std = max(std-0.2,0);
-    std = 1.2*min(std,1);
+    std = max(std-0.25,0);
+    std = 1.4*min(std,1);
     fillLine += 0.2*std;
     
     R = int((float(255) - float(255)*min(1,std))/2 +pR/2);

@@ -7,7 +7,7 @@ proper driver. The eyetracker will run a short calibration program, which you mu
 
 For the C# program in csharp/eyetracker/, you will need to use the NuGet package manager to acquire Tobii.Interaction, if it is not already installed. You will also need to download sharpOsc.dll from https://github.com/ValdemarOrn/SharpOSC/blob/master/Binaries/v0.1.1.0.zip and include it as a reference in the C# program. This program can then be run
 
-For the two Processing programs, you will need to include the oscP5 and netP5 libraries. These two programs are ready to run and should be run in parallel with the C# program.
+For the two Processing programs, you will need to include the oscP5 and netP5 libraries. The mouse control does not require any library installs, however, the Robot, AWTException, and event.InputEvent classes must be included at the top of the sketch. These two programs are ready to run and should be run in parallel with the C# program.
 
 Open the two Wekinator models. The included training data should work for most people, but, if not, it can be personalized by
  rerecording training data. Make sure the C# program is running, as the C# program is what transmits the eyetracker

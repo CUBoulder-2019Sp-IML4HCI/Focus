@@ -13,7 +13,7 @@ Open the two Wekinator models. The included training data should work for most p
  rerecording training data. Make sure the C# program is running, as the C# program is what transmits the eyetracker
  data to Wekinator.
 
-Training (default data should work)
+#### Training (default data should work)
 For focusWek, set the regression slider bar to 1 and begin reading text at a high level of focus. Then, set the bar to 0.5 and read at a medium focus level.
 Finally, set the bar to 0 and zone out for a bit. These three sets of data should be enough to train the model for your reading rate.
 
